@@ -1,0 +1,721 @@
+@font-face
+  font-family: "Montserrat-Bold"
+  src: url("/assets/fonts/Montserrat-Bold.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+@font-face
+  font-family: "Montserrat-Medium"
+  src: url("/assets/fonts/Montserrat-Medium.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+@font-face
+  font-family: "Montserrat-Regular"
+  src: url("/assets/fonts/Montserrat-Regular.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+@font-face
+  font-family: "Montserrat-SemiBold"
+  src: url("/assets/fonts/Montserrat-SemiBold.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  outline: none
+  font-family: Montserrat-Regular, sans-serif
+  font-size: 16px
+  line-height: 20px
+  color: #000
+  li
+    list-style: none
+  a
+    text-decoration: none
+
+body
+  background: #EEF0FB
+.container
+  max-width: 1200px
+  margin: auto
+.title
+  font-family: Montserrat-Bold
+  font-size: 32px
+  line-height: 39px
+  color: #000000
+  margin-bottom: 30px
+.subtitle
+  font-family: Montserrat-Bold
+  font-size: 24px
+  line-height: 29px
+
+  color: #000000
+.header-wrap
+  background: #fff
+  margin-bottom: 30px
+  .header
+    display: flex
+    align-items: center
+    .logo
+      margin-right: 100px
+    &-menu
+      &-ul
+        display: flex
+        li
+          margin-right: 35px
+          a
+            padding: 10px
+            color: #0F1742
+            &:hover
+              margin: 0
+              width: 100%
+              background: #223394
+              color: #fff
+              border-radius: 15px
+        .toggle
+          position: relative
+          &::after
+            content: url(/assets/images/header-arrow.svg)
+          &:hover::after
+            display: none
+            li
+              a
+                padding: 5px
+          &:hover
+            .toggle-link
+              background: #223394
+              border-radius: 15px
+              padding: 10px
+              color: #fff
+          &:hover .toggle-menu
+            display: block
+          &-link
+            height: 10px
+          &-menu
+            display: none
+            background-color: #fff
+            z-index: 2
+            position: absolute
+            top: 30px
+            right: 0
+            width: 200px
+            padding: 10px 20px
+            border-radius: 15px
+
+            &-sub
+              padding: 0 0 20px 0
+      &-toggle
+        display: none
+.btn
+  color: #fff
+  text-transform: uppercase
+  background: #223394
+  box-shadow: 0px 10px 20px rgba(197, 204, 242, 0.15)
+  border-radius: 10px
+  padding: 11px 20px
+  margin-right: 15px
+  &:hover
+    background: #4658bb
+.detailed:hover
+  text-decoration: underline
+.advertising-top
+  max-width: 1200px
+  height: 249px
+  margin-bottom: 60px
+
+.credit-card-wrap
+  margin-bottom: 25px
+  .credit-card
+    background: rgba(250, 250, 251, 0.95)
+    border-radius: 10px
+    padding: 35px 65px 45px 20px
+    display: flex
+    position: relative
+    &-text
+      margin-left: 15px
+
+      .description
+        margin-top: 20px
+        &:before
+          content: url(/assets/images/accept.svg)
+          margin-right: 15px
+    .excerpt
+      display: flex
+      position: absolute
+      top: 100px
+      right: 40px
+      .span-wrap
+        margin-right: 40px
+        .span
+          font-family: Montserrat-Bold
+          font-size: 42px
+          line-height: 29px
+        .span-text
+          font-size: 15px
+          line-height: 18px
+          color: #0F1742
+    .btn-wrap
+      position: absolute
+      bottom: 57px
+      right: 275px
+
+.payeer-block
+  display: flex
+  position: relative
+  background: #fff
+  border-radius: 5px
+  height: 120px
+  margin-bottom: 35px
+  align-items: center
+  .text-down
+    position: absolute
+    top: -17px
+    left: 15px
+    font-size: 14px
+    background: #64BC26
+    border-radius: 5px
+    color: #fff
+    padding: 8px 32px
+  .payeer-logo
+    width: 190px
+    margin: 0 50px 0 35px
+  .sum
+    text-align: center
+    border-left: 1px solid rgba(15, 23, 66, 0.4)
+    height: 65%
+    padding: 20px 30px
+  .year-wrap
+    border-left: 1px solid rgba(15, 23, 66, 0.4)
+    border-right: 1px solid rgba(15, 23, 66, 0.4)
+    height: 65%
+    padding: 20px 30px
+    .year
+      display: flex
+    .term
+      display: flex
+    .text
+      margin-right: 60px
+  .btn
+    margin-left: 35px
+    width: 200px
+  .text
+    font-size: 16px
+    line-height: 20px
+    color: rgba(15, 23, 66, 0.5)
+  .num
+    font-family: Montserrat-SemiBold
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 20px
+    color: #0F1742
+.blocks-ad
+  margin-bottom: 35px
+  position: relative
+  &-slider
+    height: 80px
+    .swiper-wrapper
+      .swiper-slide
+        * a img
+          width: 100%
+        .blocks-ad-three
+          padding-top: 10px
+          span
+            font-family: Montserrat-Bold
+            font-size: 22px
+            line-height: 29px
+            margin-bottom: 5px
+  &-pagination
+    position: absolute
+    bottom: -30px
+    left: 590px
+  .swiper-blocks-ad-next
+    &::after
+      position: absolute
+      right: -50px
+      top: 6px
+  .swiper-blocks-ad-prev
+    &::after
+      position: absolute
+      left: -50px
+      top: 6px
+.swiper-pagination-bullet
+  margin-right: 5px
+
+.binance
+  margin-top: 30px
+  margin-bottom: 15px
+  &-block
+    padding: 25px 70px 25px 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: rgba(250, 250, 251, 0.95)
+    border-radius: 15px
+    .description
+      font-family: Montserrat-Medium
+      font-size: 16px
+      line-height: 19px
+      color: #0F1742
+      max-width: 500px
+    .rate
+      span
+        font-family: Montserrat-Bold
+        font-size: 42px
+        line-height: 29px
+
+.more
+  font-family: Montserrat-Medium
+  font-size: 16px
+  line-height: 19px
+  color: #2C42BF
+  display: flex
+  align-items: flex-start
+  &::after
+    content: url(/assets/images/arrow-link.svg)
+  &:hover
+    text-decoration: underline
+    margin-top: 5px
+.payment
+  position: relative
+  margin-top: 30px
+  margin-bottom: 70px
+  background: rgba(250, 250, 251, 0.95)
+  border-radius: 15px
+  .swiper-container
+    height: 100px
+    max-width: 1080px
+    margin: 0
+    .swiper-slide
+      border-radius: 15px
+      height: 90px !important
+      padding-top: 20px
+      text-align: center
+      .img
+        margin-top: 10px
+
+  .more
+    position: absolute
+    right: 70px
+    bottom: 38px
+    z-index: 9
+  .swiper-button-prev
+    left: -40px
+  .swiper-button-next
+    right: -40px
+// .swiper-button-prev:after, .swiper-button-next:after
+//   content: none
+
+.product-block-wrap
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-bottom: 45px
+  .product-block
+    background: rgba(250, 250, 251, 0.95)
+    border-radius: 10px
+    width: 22%
+    text-align: center
+    padding: 60px 0 35px 0
+    margin-bottom: 40px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    .description
+      margin: 30px 0
+      .rating
+        margin-bottom: 10px
+      .text
+        font-size: 13px
+        line-height: 16px
+        color: rgba(15, 23, 66, 0.8)
+        width: 200px
+        margin: auto
+      .price
+        font-family: Montserrat-Bold
+        font-size: 28px
+        line-height: 34px
+        color: #0F1742
+    .btn
+      margin: auto
+      padding: 5px 10px
+.sections
+  padding: 45px 0
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  .description
+    text-align: center
+  &-wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 130px
+    padding-top: 10px
+    height: 110px
+    &:not(:last-child)
+      margin-right: 5px
+    &:hover,
+      background: #fff
+      border-radius: 15px
+    &-img
+      width: 58px
+      height: 58px
+.active-link
+  background: #fff
+  border-radius: 15px
+.still-wrap
+  text-align: center
+  .still-btn
+    cursor: pointer
+    margin-bottom: 25px
+    &::after
+      content: url(/assets/images/header-arrow.svg)
+      margin-left: 5px
+  .active
+    &::after
+      content: url(/assets/images/arrow-down.svg)
+  .still
+    display: none
+
+.social
+  display: flex
+  justify-content: space-between
+  margin: 35px 0 40px
+  &-block
+    background: rgba(250, 250, 251, 0.95)
+    border-radius: 20px
+    width: 190px
+    height: 190px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &-img
+      fill: #223394
+    &:hover
+      .social-block-img
+        fill: #4658bb
+      .text
+        color: #4658bb
+    .text
+      margin-top: 20px
+      font-family: Montserrat-Medium
+      font-size: 24px
+      line-height: 29px
+      color: #223394
+
+.ad
+  margin-bottom: 55px
+  &-slider
+    .swiper-wrapper
+      .swiper-slide
+        &:hover
+          -webkit-transform: scale(1.1)
+          -moz-transform: scale(1.1)
+          -o-transform: scale(1.1)
+        .ad-link
+          display: flex
+          background: #FFFFFF
+          border-radius: 15px
+          height: 160px
+          padding-right: 15px
+          &-wrap
+            display: flex
+            flex-direction: column
+            padding-top: 25px
+            .title
+              font-family: Montserrat-Medium
+              font-size: 16px
+              line-height: 21px
+              color: #0F1742
+              margin-bottom: 10px
+            .text
+              font-size: 15px
+              line-height: 21px
+              color: #0F1742
+
+.footer-title
+  font-family: Montserrat-SemiBold
+  font-size: 16px
+  line-height: 20px
+  color: #0F1742
+  margin-bottom: 15px
+  padding-left: 10px
+.footer-wrap
+  background: #fff
+  padding: 40px 0
+  .footer
+    display: flex
+    align-items: flex-start
+    .nav
+      display: flex
+      justify-content: space-between
+      .one-block
+        margin-right: 85px
+        margin-left: 80px
+        .inlet-ul
+          margin-bottom: 40px
+      .division
+        margin-right: 25px
+      .company
+        margin-right: 90px
+      .footer-links
+        .phone:hover
+          width: 100%
+        .footer-social
+          margin-top: 70px
+          &-links
+            display: flex
+            flex-wrap: wrap
+            .link
+              margin-right: 20px
+              &-img
+                fill: #223394
+                &:hover
+                  fill: #4c61db
+  .footer nav * li
+    margin-bottom: 10px
+    a
+      padding: 10px
+    &:hover
+      a
+        border-radius: 15px
+        width: 100%
+        background: #223394
+        color: #fff
+  .phone
+    padding: 10px
+    &:hover
+      border-radius: 15px
+      width: 100%
+      background: #223394
+      color: #fff
+@media screen and (max-width: 1024px)
+  .header-wrap
+    .header
+      .logo
+        margin-right: 50px
+      &-menu
+        &-ul
+          li
+            a
+              font-size: 13px
+  .payment
+    .more
+      position: static
+      justify-content: center
+  .credit-card-wrap
+    .credit-card
+      .excerpt
+        top: 80px
+        .span-wrap
+          margin-right: 15px
+          .span
+            font-size: 27px
+      .btn-wrap
+        right: 35px
+  .payeer
+    &-block
+      justify-content: center
+      flex-wrap: wrap
+      padding-top: 20px
+      height: auto
+      .sum
+        padding: 10px 15px
+      .year-wrap
+        padding: 10px
+        .year
+          .text
+            font-size: 12px
+            margin-right: 20px
+          .num
+            font-size: 14px
+        .term
+          .num
+            font-size: 14px
+          .text
+            margin-right: 20px
+      .btn
+        margin: 20px 0
+  .product-block-wrap
+    .product-block
+      margin-left: 20px
+      margin-right: 20px
+      width: 29%
+  .footer-wrap
+    .footer
+      &-title
+        font-size: 13px
+      .nav
+        a
+          font-size: 12px
+        .one-block
+          margin-right: 45px
+          margin-left: 30px
+
+  .blocks-ad
+    .swiper-blocks-ad-next
+      &::after
+        position: absolute
+        right: 10px
+        top: -80px
+    .swiper-blocks-ad-prev
+      &::after
+        position: absolute
+        left: 400px
+        top: -80px
+@media screen and (max-width: 768px)
+  .header-wrap
+    .header
+      justify-content: space-between
+      position: relative
+      &-menu
+        display: none
+        position: absolute
+        right: 0
+        top: 50px
+        padding: 30px
+        border-radius: 15px
+        background: #fff
+        z-index: 99
+        &-ul
+          flex-direction: column
+          align-items: flex-start
+          .toggle-menu
+            top: 25px
+            right: -85px
+            padding-left: 30px
+            width: 178px
+            padding-top: 0
+            border-radius: 15px
+            &-sub
+              padding: 0
+        &-toggle
+          display: flex
+          align-items: center
+          justify-content: space-between
+          flex-direction: column
+          width: 30px
+          height: 20px
+          margin-right: 25px
+          span
+            width: 100%
+            height: 2px
+            background: #223394
+  .subtitle
+    font-size: 20px
+  .description, .title
+    padding-left: 20px
+  .credit-card-wrap
+    .credit-card
+      flex-direction: column
+      margin: auto
+      padding-right: 20px
+      &-img
+        width: 266px
+        height: 177px
+        margin: auto
+        margin-bottom: 35px
+      &-text
+        display: flex
+        flex-direction: column
+        align-items: center
+        .description
+          margin-top: 5px
+          width: 255px
+          font-size: 13px
+      .btn-wrap
+        right: 55px
+        bottom: 20px
+        position: static
+        display: flex
+        align-items: center
+        justify-content: center
+      .excerpt
+        top: 80px
+        display: block
+        position: static
+        margin-top: 20px
+        .span-wrap
+          display: flex
+          flex-direction: column
+          align-items: center
+          margin-bottom: 10px
+          .span
+            font-size: 13px
+            line-height: 8px
+            margin-bottom: 5px
+          .span-text
+  .payeer
+    &-block
+      padding-top: 35px
+      flex-direction: column
+      .sum
+        border: none
+      .year-wrap
+        border: none
+  .blocks-ad-slider
+    .swiper-wrapper
+      .swiper-slide
+        .blocks-ad-three
+          span, p
+            font-size: 11px
+            line-height: 10px
+  .blocks-ad-pagination
+    display: none
+  .social
+    justify-content: center
+    flex-wrap: wrap
+    &-block
+      margin: 0 15px 15px 0
+  .binance
+    &-block
+      flex-direction: column
+      padding-right: 25px
+      &-img, .description, .rate
+        margin-bottom: 10px
+      .description
+        font-size: 13px
+  .product-block-wrap
+    .product-block
+      width: 40%
+      padding-bottom: 0
+  .sections
+    &-wrap
+      margin: 0 25px 20px 0
+      .description
+        padding: 0
+
+  .footer-wrap
+    .footer
+      flex-direction: column
+      align-items: center
+      .nav
+        flex-direction: column
+        align-items: center
+        .one-block
+          margin: 0
+        .division
+          margin: 0 0 0 25px
+        .company
+          margin: 0 35px 0 0
+        .footer-links
+          width: 130px
+          .footer-social
+            margin-top: 20px
+@media screen and (max-width: 540px)
+  .product-block-wrap
+    .product-block
+      width: 100%
+      padding-top: 20px
+  .blocks-ad
+    .swiper-blocks-ad-next
+      &::after
+        display: none
+    .swiper-blocks-ad-prev
+      &::after
+        display: none
+@media screen and (max-width: 425px)
+  .title
+    font-size: 25px
