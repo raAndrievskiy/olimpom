@@ -975,6 +975,7 @@ body {
 @media screen and (max-width: 425px) {
   .title {
     font-size: 25px;
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */
